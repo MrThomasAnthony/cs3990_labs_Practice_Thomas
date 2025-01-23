@@ -1,51 +1,48 @@
 h1, h2, h3, h4, h5, h6{
     font-family: 'Times New Roman', Times, serif;
-    color: #ff0000;
-}
-
-p, li{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: aliceblue;
 }
 
 body{
-    background-color: rgb(0, 0, 0);
-    margin: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #bread_crumbs{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(255, 225, 0);
+    color: rgb(0, 26, 255);
 }
 
-#home_img{
-    position: absolute;
-    height: 35%;
-    width: 50%;
-}
-
-.personal-information {
+.personal-information-img {
     position: relative;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.personal-information > div{
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.personal-information > div > img{
-    height: 25rem;
-    width: 25rem;
     border-radius: 50%;
+    float: right;
+    height: 100px;
+    width: 100px;
 }
 
-.personal-information > div > h6{
-    color: burlywood;
+.personal-info-content{
+}
+.martial-status{
+    color: rgb(95, 97, 3);
 }
 
-.personal_info_content {
-    align-content: center;
-    padding-left: 15%;
+.aside-info{
+    float: right;
+    background-color: azure;
+}
+
+.personal-description{
+    background-color: azure;
+}
+
+header{
+    background-color: brown;
+}
+
+footer{
+    background-color: brown;
 }
