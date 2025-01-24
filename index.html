@@ -3,51 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studen CV</title>
-    <link rel="stylesheet" href="./Styles/styles.css">
+    <meta name="description" content="Personal website of Kelyn Thomas, a second-year Computer Science student">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <title>Kelyn Thomas - Home</title>
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./page2.html">Page2</a></li>
-            <li><a href="./page3.html">Page3</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Education & Hobbies</a></li>
+                <li><a href="page3.html">Career & Favorites</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <p id="bread_crumbs">Home Page</p>
+    <main>
+        <section id="personal-info">
+            <h1>Kelyn Thomas</h1>
+            <p><strong>Date of Birth:</strong> January 15, 2003</p>
+            <p><strong>Place of Birth:</strong> New York City, USA</p>
+            <p><strong>Marital Status:</strong> Single</p>
+            <img src="Images/lightskin.png" alt="Kelyn Thomas" class="profile-photo">
+        </section>
 
-    <aside class="aside-info">
-        <div>
-            <h1>Personal Information</h1>
-        <hr>
-            <div class="personal-information">
-                <div class="personal-info-content">
-                    <img src="./Images/lightskin.png" alt="Jon Jones" class="personal-information-img">
-                    <h1>Jon Jones | <span class="martial-status">Single</span></h1>
-                    <h3>Born July 19, 1987 | Rochester, New York</h3>
-                </div>
-            </div>
-        </div>
+        <section id="contact">
+            <h2>Contact Details</h2>
+            <ul>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>Email:</strong> kelyn.thomas@example.com</li>
+                <li><strong>Facebook:</strong> <a href="#" title="Kelyn's Facebook">facebook.com/kelynthomas</a></li>
+                <li><strong>Instagram:</strong> <a href="#" title="Kelyn's Instagram">instagram.com/kelynthomas</a></li>
+                <li><strong>Address:</strong> 123 Main St, New York, NY</li>
+            </ul>
+        </section>
 
-        <div>
-            <h1>Contact Details</h1>
-            <a href="mailto:thomaskelyn4@gmail.com">email</a>
-            <a href="tel:7802285418">phone</a>
-            <a href="https://www.facebook.com/Jonbones.Jones/">Facebook</a>
-            <a href="https://www.instagram.com/jonnybones/">instagram</a>
-            <address href="Old Gorge Rd, Ithaca, NY 14850">Old Gorge Rd, Ithaca, NY 14850</address>
-        </div>
-    </aside>
-    
-    <section class="personal-description"> 
-        <p>
-            I’m Jon Jones, a professional MMA fighter with a reputation as one of the greatest to ever compete in the sport. I was born on July 19, 1987, in Rochester, New York, and began my journey in mixed martial arts at a young age. I became the youngest UFC champion in history at 23 years old and have since defended my title multiple times. My skill set is well-rounded, with expertise in striking, wrestling, and Brazilian Jiu-Jitsu, allowing me to dominate in all aspects of the fight. I’m known for my high fight IQ, athleticism, and ability to adapt and innovate in the Octagon. Throughout my career, I’ve been ranked as one of the top pound-for-pound fighters in the world, and I continue to push myself to be the best.
-        </p>
-    </section>
+        <section id="skills">
+            <h2>Personal Skills & Qualities</h2>
+            <ul>
+                <li>Excellent communication</li>
+                <li>Problem-solving mindset</li>
+                <li>Team player</li>
+                <li>Adaptability</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Computer Science, XYZ University (2023-Present)</p>
+            <p>High School Diploma, ABC High School, New York (2019-2023)</p>
+            <img src="university.jpg" alt="University" class="education-image" title="XYZ University">
+            <img src="highschool.jpg" alt="High School" class="education-image" title="ABC High School">
+        </section>
+
+        <nav id="bottom-nav">
+            <ul>
+                <li><a href="#top" class="anchor">Top</a></li>
+                <li><a href="page2.html" class="anchor">Next Page</a></li>
+            </ul>
+        </nav>
+    </main>
 
     <footer>
-        <p>Footer</p>
-    </footer>               
+        <p>&copy; 2025 Kelyn Thomas. All rights reserved.</p>
+    </footer>
 </body>
 </html>
