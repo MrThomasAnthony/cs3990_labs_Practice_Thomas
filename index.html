@@ -9,7 +9,7 @@
     <title>Kelyn Thomas - Home</title>
 </head>
 <body>
-    <header>
+    <header id="#top">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,11 +19,18 @@
         </nav>
     </header>
 
+    <nav id="bottom-nav">
+        <ul>
+            <li><a href="#bottom" class="anchor">Bottom</a></li>
+            <li><a href="page2.html" class="anchor">Next Page</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section id="personal-info">
             <h1>Kelyn Thomas</h1>
-            <p><strong>Date of Birth:</strong> January 15, 2003</p>
-            <p><strong>Place of Birth:</strong> New York City, USA</p>
+            <p><strong>Date of Birth:</strong> November 18, 2000</p>
+            <p><strong>Place of Birth:</strong> Kwa-Zulu Natal, RSA</p>
             <p><strong>Marital Status:</strong> Single</p>
             <img src="Images/lightskin.png" alt="Kelyn Thomas" class="profile-photo">
         </section>
@@ -31,11 +38,25 @@
         <section id="contact">
             <h2>Contact Details</h2>
             <ul>
-                <li><strong>Phone:</strong> (555) 123-4567</li>
-                <li><strong>Email:</strong> kelyn.thomas@example.com</li>
-                <li><strong>Facebook:</strong> <a href="#" title="Kelyn's Facebook">facebook.com/kelynthomas</a></li>
-                <li><strong>Instagram:</strong> <a href="#" title="Kelyn's Instagram">instagram.com/kelynthomas</a></li>
-                <li><strong>Address:</strong> 123 Main St, New York, NY</li>
+                <li>
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z" fill="#000000"></path> </g></svg>
+                    <a href="tel:5551234567">(780) 501-5418</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.02832 10L10.2246 14.8166C10.8661 15.2443 11.1869 15.4581 11.5336 15.5412C11.8399 15.6146 12.1593 15.6146 12.4657 15.5412C12.8124 15.4581 13.1332 15.2443 13.7747 14.8166L20.971 10M10.2981 4.06879L4.49814 7.71127C3.95121 8.05474 3.67775 8.22648 3.4794 8.45864C3.30385 8.66412 3.17176 8.90305 3.09111 9.161C3 9.45244 3 9.77535 3 10.4212V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V10.4212C21 9.77535 21 9.45244 20.9089 9.161C20.8282 8.90305 20.6962 8.66412 20.5206 8.45864C20.3223 8.22648 20.0488 8.05474 19.5019 7.71127L13.7019 4.06879C13.0846 3.68116 12.776 3.48735 12.4449 3.4118C12.152 3.34499 11.848 3.34499 11.5551 3.4118C11.224 3.48735 10.9154 3.68116 10.2981 4.06879Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <a href="mailto:thomaskelyn4@gmail.com">thomaskelyn4@gmail.com</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"></path> </g></svg>
+                    <a href="https://www.facebook.com/profile.php?id=100083298708500" title="Kelyn's Facebook">facebook.com/kelynthomas</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"></path> </g></svg>
+                    <a href="https://www.instagram.com/kels0.0.3/" title="Kelyn's Instagram">instagram.com/kels0.0.3</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="#000000"></path> </g></svg> 123 Main St, New York, NY
+                    </li>
             </ul>
         </section>
 
@@ -47,14 +68,14 @@
                 <li>Team player</li>
                 <li>Adaptability</li>
             </ul>
-        </section>
+        </section>  
 
         <section id="education">
             <h2>Education</h2>
-            <p>Bachelor of Science in Computer Science, XYZ University (2023-Present)</p>
-            <p>High School Diploma, ABC High School, New York (2019-2023)</p>
-            <img src="university.jpg" alt="University" class="education-image" title="XYZ University">
-            <img src="highschool.jpg" alt="High School" class="education-image" title="ABC High School">
+            <p>Bachelor of Science in Computer Science, XYZ University (2021-Present)</p>
+            <img src="Images/xyzuni.png" alt="University" class="education-image" title="XYZ University">
+            <p>High School Diploma, ABC High School, New York (2014-2019)</p>
+            <img src="Images/abchigh.png" alt="High School" class="education-image-highschool" title="ABC High School">
         </section>
 
         <nav id="bottom-nav">
@@ -65,7 +86,7 @@
         </nav>
     </main>
 
-    <footer>
+    <footer id="bottom">
         <p>&copy; 2025 Kelyn Thomas. All rights reserved.</p>
     </footer>
 </body>
