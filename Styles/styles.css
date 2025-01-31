@@ -18,25 +18,27 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
+h1 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
 
 /* Header */
 header {
+    display: flex;
+    flex: row;
+    gap: 30%;
     background-color: #C8A2C8;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    padding: 2% 2% 2% 3%;
+    margin: 0 0 25px 0;
     height: 250px;
-}
-
-header h1{
-    text-align: center;
 }
 
 menu{
     background-color: #C8A2C8;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    padding: 30px 30px;
 }
 
 #menu-buttons {
@@ -54,26 +56,25 @@ menu{
     background-color: #750082;
     text-decoration: none;
     border-radius: 15%;
-    padding: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 0;
     width: 100px;
 }
 
 #nwp-button{
     text-align: center;
-    color: #ffffff;
+    color: #ffe100;
+    font-weight: bold;
     background-color: hsl(248, 100%, 50%);
     text-decoration: none;
     border-radius: 15%;
-    padding: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 0;
     width: 100px;
 }
 
 #nwp-button:hover{
-    color: #e0d900;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: hsl(0, 100%, 50%);
 }
 
 #github-button{
@@ -93,47 +94,93 @@ menu nav a:hover {
 
 .wrapper{
     flex: 1;
-    margin-top: 40px;
-    padding-bottom: 10%;
+    margin: 25px 0 0 0;
     display: flex;
-    gap: 10px;
+    gap: 1%;
+    height: 100%;
 }
 
-.asides-left{
-    gap: 10px;
+.asides{
+    display: flex;
+    flex-direction: column;
     width: 20%;
+    gap: 2%;
 }
 
 #aside1{
     background-color: #C8A2C8;
-    padding: 30px;
+    height: 35%;
+    padding: 15px;
 }
 
 aside img{
     width: 100%;
+    height: 100%;
 }
 
 #aside2{
     background-color: #C8A2C8;
     padding: 15px;
-    height: 400px;
+    height: 65%;
 }
 
-#aside2 > ol {
-    background-color: #ce6868;
-}
-
-#aside2 > ol > li {
+#aside2  ol {
+    background-color: #be7d7d;
+    list-style: none;
     padding: 15px;
+    margin: 0;
 }
 
-#aside2 > ol > li::marker{
-    color: #dddddd;
+#aside2 ol li {
+    background-color: #c75a5a; /* Deep Pink List Items */
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
 }
 
-#aside2 > ol > li > span{
-    color: #dddddd;
-    background-color: #a53939;
+#aside2 li::before {
+    content: counter(my-counter) ".";
+    counter-increment: my-counter;
+    background-color: #c75a5a; /* Dark Red Number Box */
+    min-width: 30px;
+    text-align: center;
+}
+
+ol {
+    counter-reset: my-counter;
+}
+
+#li-content{
+    background-color: rgb(158, 42, 65);
+}
+
+#aside3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#aside3 span{
+    background-image: url("/Images/toDo.png");
+    background-size: 20px 20px; /* Adjust size */
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px; /* Ensure text doesn’t overlap the image */
+}
+
+#aside3 span:focus-within{
+    background-image: url("/Images/done.png");
+    background-size: 20px 20px; /* Adjust size */
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px; /* Ensure text doesn’t overlap the image */
+}
+
+#aside3{
+    background-color: #C8A2C8;
+    padding: 15px;
+    height: 100%;
 }
 
 .midsection{
@@ -142,13 +189,7 @@ aside img{
 }
 
 .asides-right{
-    gap: 10px;
     width: 20%;
-}
-
-#aside3{
-    background-color: #C8A2C8;
-    padding: 30px;
 }
 
 .main-content{
@@ -200,8 +241,8 @@ h3 {
 
 .profile-photo {
     float: left;
-    width: 250px;
-    height: 250px;
+    width: 15%;
+    height: 100%;
 }
 
 section {
@@ -309,17 +350,15 @@ p:nth-child(1) {
 /* Footer */
 footer {
     position: fixed;
+    width: 100%;
     bottom: 0;
     left: 0;
-    width: 100%;
-    padding: 10px;
     background-color: #750082;
 }
 
 #web-links{
     float: left;
     padding: 55px;
-    width: 10%;
 }
 
 footer div nav{
@@ -338,29 +377,29 @@ footer div nav{
 #link-decor > a:not(#github-button,#nwp-button) {
     text-align: center;
     color: #ffffff;
-    background-color: #ee00ff;
+    background-color: #e500fe;
     text-decoration: none;
     border-radius: 15%;
-    padding: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 0;
     width: 100px;
 }
 
 
 #socials{
+    position: relative;
     float: right;
-    padding: 55px;
-    width: 25%;
+    top: 150px;
+    margin-right: 50px;
 }
 
-#socials nav{
+#social-decor{
     display: flex;
+    align-content: center;
 }
 
 #fb-link{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
     background-image: url("/Images/greyscale/5365678_fb_facebook_facebook\ logo_icon_grayscale.png");
 }
@@ -370,8 +409,8 @@ footer div nav{
 }
 
 #ig-link{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
     background-image: url("/Images/greyscale/5296765_camera_instagram_instagram\ logo_icon_grayscale.png");
 }
@@ -381,8 +420,8 @@ footer div nav{
 }
 
 #yt-link{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
     background-image: url("/Images/greyscale/5296521_play_video_vlog_youtube_youtube\ logo_icon_grayscale.png");
 }
