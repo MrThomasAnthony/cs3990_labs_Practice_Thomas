@@ -14,7 +14,7 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-#page3-font {
+.page3-font {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -76,8 +76,32 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #007BFF;
+h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #007BFF  ;
+}
+
+h1:nth-child(odd):before{
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 140px;
+}
+
+h1:nth-child(odd):after{
+    display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 140px;
 }
 
 h2 {
@@ -85,6 +109,7 @@ h2 {
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     font-style: italic;
+    color: #007BFF;
 }
 
 h3 {
@@ -187,6 +212,25 @@ p:nth-child(1) {
     text-indent: 0;
 }
 
+/* Bread Crumbs */
+
+#bread-crumbs{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#index #bread-crumbs::before{
+    content: '>>';
+}
+
+#page2 #bread-crumbs::before{
+    content: '>>Home/';
+}
+
+#page3 #bread-crumbs::before{
+    content: '>>Home/Page2/';
+}
+
 /* Navigation at Top */
 #top-nav {
     text-align: center;
@@ -222,6 +266,10 @@ p:nth-child(1) {
     content: "\1F447";
     display: inline;
     margin-left: 5px;
+}
+
+.page3-font .page3 p:nth-child(4):before{
+    content: "\1F449";  
 }
 
 /* Navigation at Bottom */
