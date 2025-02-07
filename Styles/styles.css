@@ -49,8 +49,17 @@ header nav ul li a:hover {
 }
 
 /* Main Content */
-#contact > ul > li > svg{
+#contact ul li svg{
     width: 25px;
+}
+
+#contact ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#contact ul li a:hover{
+    color: #0004ff;
 }
 
 #personal-info a{
@@ -118,6 +127,11 @@ section ul li {
 ul li:first-of-type{
     color: #ff0000;
 }
+
+ul li:not(.spec_item) {
+    font-family:cursive;
+}
+
 
 .company-images{
     flex-direction: row;
