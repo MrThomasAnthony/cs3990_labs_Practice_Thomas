@@ -94,6 +94,10 @@ h3 {
     height: 250px;
 }
 
+.profile-photo:hover{
+    border: 5px solid #ff0000;
+}
+
 section {
     margin-bottom: 2rem;
 }
@@ -109,6 +113,10 @@ section ul li {
 
 #skills .skills-ul{
     list-style: lower-alpha;
+}
+
+ul li:first-of-type{
+    color: #ff0000;
 }
 
 .company-images{
