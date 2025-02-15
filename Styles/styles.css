@@ -1,158 +1,316 @@
-/* General Styles */
+[class*="column-"] {
+    float: left;
+    padding: 12px;
+}
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    width: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
 }
 
-/* Header */
-header {
-    background-color: #4B0082;
-    color: white;
+/* Site Header */
+.site-header {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 18px;
     text-align: center;
-    padding: 20px;
-    font-size: 24px;
+    min-height: 10vh;
 }
 
-/* Container Layout */
-.container {
-    position: relative;
-    height: 100%;
+/* Main container */
+.container-main {
+    min-height: 50vh;
+    margin: 5px;
+}
+.container-main::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
-/* Sidebar (Left) */
-.sidebar-left {
-    position: absolute;
-    top: 0.5%;
-    width: 20%;
-    color: white;
-    padding: 0;
+/* Navigation Menu */
+.nav-menu ul {
+    list-style-type: none;
+    background-color: #FF0000;
     margin: 0;
+    padding: 12px;
+    width: fit-content;
+}
+.nav-menu li {
+    padding: 6px;
+    margin-bottom: 8px;
+    background-color: #FFFFFF;
+    color: #FF0000;
+}
+.nav-menu li:hover {
+    background-color: #FF0000;
+    color: #FFFFFF;
 }
 
-.sidebar-left ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Site Content */
+#canada-map {
+    display: inline-block;
+    width: 70%;
 }
 
-.sidebar-left ul li {
-    background: #d8a1e0;
-    margin: 0 0 1.3% 0;
-    padding: 10px;
+/* Tabs */
+.tabs li {
+    display: inline-block;
 }
-
-/* Main Content */
-.main-content {
-    position: absolute;
-    width: 60%;
-    padding: 0.7%;
-    margin: 0;
-    left: 20.5%;
-    top: 5%;
-    background: white;
-}
-
-.main-content div{
-    padding: 0.5%;
-}
-
-.main-content-nav a{
+.tabs li > a {
     text-decoration: none;
-    color: rgb(56, 0, 76);
-    font-weight: bold;
-    background-color: #6f5283;
-    padding: 0.3% 0.5%;
+    color: #FF0000;
+}
+.tabs li > a:active {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+.tabs article {
+    display: none;
+}
+.tabs article:target {
+    display: block;
+}
+article:target ~ section {
+    display: none;
 }
 
-.main-content-nav a:hover{
-    background-color: #210037;
+/* Province List */
+#province-list li {
+    display: block;
+}
+#province-list img {
+    width: 5%;
 }
 
-.canada_map{
-    width: 30vw;
-    height: 50vh;
+/* Province Hover Effects */
+/* Provinces */
+#prov-alberta:hover::after {
+    display: inline-block;
+    content: "661,848 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-british-columbia:hover::after {
+    display: inline-block;
+    content: "944,735 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-saskatchewan:hover::after {
+    display: inline-block;
+    content: "651,036 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-manitoba:hover::after {
+    display: inline-block;
+    content: "647,797 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-ontario:hover::after {
+    display: inline-block;
+    content: "917,741 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-quebec:hover::after {
+    display: inline-block;
+    content: "1,542,056 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-new-brunswick:hover::after {
+    display: inline-block;
+    content: "72,908 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-nova-scotia:hover::after {
+    display: inline-block;
+    content: "55,284 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-prince-edward-island:hover::after {
+    display: inline-block;
+    content: "5,660 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#prov-newfoundland-labrador:hover::after {
+    display: inline-block;
+    content: "405,212 sq km";
+    margin-left: 4px;
+    font-style: italic;
 }
 
-.provinces{
-    list-style: none;
-    padding: 0;
+/* Territories */
+#terr-yukon:hover::after {
+    display: inline-block;
+    content: "482,443 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#terr-nwt:hover::after {
+    display: inline-block;
+    content: "1,346,106 sq km";
+    margin-left: 4px;
+    font-style: italic;
+}
+#terr-nunavut:hover::after {
+    display: inline-block;
+    content: "2,093,190 sq km";
+    margin-left: 4px;
+    font-style: italic;
 }
 
-.ontario{
-    background: url(/Images/Flag_of_Ontario.svg.png);
-    background-size: 100px 100px; /* Set the desired size of the image */
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 24px;  /* Add padding to avoid overlapping the text */
-    margin-bottom: 8px;  /* Optional spacing between items */
+/* Alberta-holidays */
+#alberta-holidays ul{
+    background-color: #FF0000;
+    padding: 10px 12px;
 }
 
-.quebec{
-    background: url(/Images/Flag_of_Quebec.svg.png);
-    background-size: 100px 100px; /* Set the desired size of the image */
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 24px;  /* Add padding to avoid overlapping the text */
-    margin-bottom: 8px;  /* Optional spacing between items */
-}
-
-.nova-scotia{
-    background: url(/Images/Flag_of_Nova_Scotia.svg.png);
-    background-size: 100px 100px; /* Set the desired size of the image */
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 24px;  /* Add padding to avoid overlapping the text */
-    margin-bottom: 8px;  /* Optional spacing between items */
-}
-
-.new-brunswick{
-    background: url(/Images/Flag_of_New_Brunswick.svg.png);
-    background-size: 100px 100px; /* Set the desired size of the image */
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 24px;  /* Add padding to avoid overlapping the text */
-    margin-bottom: 8px;  /* Optional spacing between items */
-}
-
-/* Sidebar (Right) */
-.sidebar-right {
-    position: absolute;
-    width: 19%;
-    right: 0%;
-    background-color: #9370DB;
-    color: white;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-right .job {
-    background: #b794f4;
-    margin-bottom: 10px;
-    padding: 10px;
+#alberta-holidays li{
+    background-color: #ffa1a1;
     border-radius: 5px;
+    padding: 6px 5px;
+    margin: 6px 5px;
 }
 
-.sidebar-right .job.most-popular {
-    background-color: #ffcc00;
-    color: black;
+/* Alberta-parks */
+#alberta-parks ul{
+    background-color: #FF0000;
+    padding: 10px 12px;
+}
+
+#alberta-parks li{
+    background-color: #ffa1a1;
+    border-radius: 5px;
+    padding: 6px 5px;
+    margin: 6px 5px;
+}
+/* Dropdown Menu */
+.drop-menu {
+    position: relative;
+    display: inline-block;
+}
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #FF0000;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.drop-content a {
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    color: #FFFFFF;
+}
+.drop-content a:hover {
+    background-color: #FFFFFF;
+    color: #FF0000;
+}
+.drop-menu:hover .drop-content {
+    display: block;
+}
+
+/* Sidebar Right */
+.sidebar-right {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    text-align: center;
+}
+.sidebar-right section {
+    float: left;
+    padding: 2%;
+    font-size: 0.7em;
+    margin: auto;
+    margin-bottom: 1%;
+    min-height: 250px;
+}
+
+/* Job Header */
+.job-header {
+    border: 5px double #ffffff;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    text-align: center;
+    min-height: 80px;
+    padding: 1%;
+    border-top-right-radius: 20px;
+    border-color: #FFFFFF;
+}
+.job-label {
+    width: 80%;
+    text-align: left;
+    text-transform: uppercase;
+    border-radius: 0 15px 15px 0;
+}
+.job-label.popular {
+    background-color: #000000;
+    color: #FFFFFF;
     font-weight: bold;
 }
-
-.sidebar-right .job.new {
-    background-color: #32cd32;
-    color: white;
+.job-label.new {
+    background-color: #ff7979;
+    color: #030000;
+    font-weight: bold;
+}
+.salary {
+    text-align: right;
+    font-weight: bold;
+}
+.salary::before {
+    content: '$';
+}
+.salary::after {
+    content: ' an hour';
+    font-style: italic;
 }
 
-/* Footer */
-footer {
-    background-color: #4B0082;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
+/* Site Footer */
+.site-footer {
+    position: fixed;
     bottom: 0;
+    width: 100%;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #FF0000;
+    height: 40px;
+}
+.site-footer section {
+    width: 40%;
+    margin: 1% auto;
+}
+.footer-left {
+    float: left;
+    padding-left: 1%;
+}
+.footer-right {
+    text-align: right;
+    float: right;
+    padding-right: 1%;
+}
+
+/* Mobile First - For mobile phones: */
+[class*="column-"] {
+    width: 100%;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    .column-1, .sidebar-right {
+        width: 25%;
+    }
+    .column-2 {
+        width: 50%;
+    }
+    .column-4 {
+        width: 50%;
+    }
 }
