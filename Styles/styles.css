@@ -1,0 +1,46 @@
+h1, h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    padding: .5%;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/05/32/73/17/1000_F_532731784_jSg30ziuYRLKoxywe1uIWNoDKEqRNL4H.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    background-color: rgb(161, 145, 0);
+    font-size: large;
+    color: white;
+    border: none;
+}
+
+.collection{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+}
+
+.card{
+    border-radius: 5px;
+    border-color: black;
+    margin: 5%;
+}
+
+.cert{
+    display: grid;
+    grid-template-rows: 75% 25%;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://t4.ftcdn.net/jpg/04/10/26/45/240_F_410264589_xuHcPbdMIgRY0xLTuvzHkA3hR06tB23z.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
