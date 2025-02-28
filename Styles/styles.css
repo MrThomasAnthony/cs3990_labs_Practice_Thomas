@@ -1,5 +1,5 @@
 body{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -19,11 +19,12 @@ p{
 
 header{
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 0;
-    padding: .5%;
+    grid-template-columns: repeat(auto-fit,minmax(430px,1fr));
+    align-items: center;
+    padding: 1em 1em;
     background-image: url("https://as2.ftcdn.net/v2/jpg/05/32/73/17/1000_F_532731784_jSg30ziuYRLKoxywe1uIWNoDKEqRNL4H.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
@@ -43,14 +44,16 @@ button:hover{
 
 .collection{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 2%;
-    margin: 1.5% 2.5%;
+    margin: 2% auto;
+    padding: 2px;
+    max-width: 1200px;
 }
 
 .card{
     display: grid;
-    grid-template-rows: repeat(auto-fill,minmax(500px,1fr));
+    grid-template-rows: repeat(auto-fill,1fr);
     margin: 0;
     padding: 2%;
     border: 1px solid black;
@@ -58,8 +61,10 @@ button:hover{
 }
 
 .card-head{
+    position: relative;
     display: grid;
-    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    grid-auto-rows: repeat(auto-fit,minmax(200px,1fr));
+    height: 10em;
 }
 
 .cert {
@@ -95,6 +100,16 @@ button:hover{
     background-image: url('https://g.foolcdn.com/editorial/images/488387/tech-worker.jpg'); /* Replace with actual image */
 }
 
+.cert h2,.diploma h2, .degree h2{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0.3em;
+    width: 93%;
+    color: aliceblue;
+    background-color: rgba(54, 54, 54, 0.63);
+}
+
 .card-body{
     margin: auto 2%;
     padding: 0;
@@ -107,9 +122,11 @@ button:hover{
 
 .courses{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 2%;
-    margin: 1.5% 3%;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 1%;
+    padding: 2px;
+    max-width: 1000px;
+    margin: 2% auto;
 }
 
 .course-card{
@@ -144,9 +161,22 @@ button:hover{
     font-weight: bold; /* Optional: Style the new text */
 }
 
-footer div{
-    margin: 0;
-    padding: 0;
-    height: 5vh;
-    background-color: rgb(111, 246, 251);
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+  }
+
+.footer-left{
+    text-align: start;
+}
+
+.footer-right{
+    text-align: end;
 }
