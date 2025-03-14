@@ -1,3 +1,8 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+
 h1{
     color: aliceblue;
     text-align: center;
@@ -32,7 +37,6 @@ p{
     grid-column-start: span 1;
     background-color: rgb(255, 120, 120);
     margin: auto 0;
-    padding: 0 150px;
 }
 
 .c{
@@ -70,7 +74,6 @@ p{
 .dminor{
     grid-row-start: 5;
     background-color: rgb(255, 120, 120);
-    padding: 0 150px;
 }
 
 .link-container{
