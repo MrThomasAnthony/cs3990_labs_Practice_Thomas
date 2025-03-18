@@ -21,10 +21,11 @@ p{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(5, 1fr);
     background-color: rgb(126, 0, 0);
     gap:20px;
     padding: 1em;
+    margin: 0px;
 }
 
 .a{
