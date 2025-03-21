@@ -21,3 +21,17 @@ img{
   width: 250px;
   height: 250px;
 }
+
+#task-nav{
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#title{
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 50;
+}
