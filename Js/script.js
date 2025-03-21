@@ -79,3 +79,4 @@ function task2() {
         alert("Content is not available due to age restrictions");
     }
 }
+
