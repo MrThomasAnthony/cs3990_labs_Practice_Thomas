@@ -59,19 +59,19 @@ function task2() {
 
         switch (animal) {
             case 'cat':
-                imageUrl = 'cat.jpg';
+                imageUrl = '/Images/cat.jpg';
                 break;
             case 'dog':
-                imageUrl = 'dog.jpg';
+                imageUrl = '/Images/dog.jpg';
                 break;
             case 'frog':
-                imageUrl = 'frog.jpg';
+                imageUrl = '/Images/frog.jpg';
                 break;
             case 'mouse':
-                imageUrl = 'mouse.jpg';
+                imageUrl = '/Images/mouse.jpg';
                 break;
             default:
-                imageUrl = 'default.jpg';
+                imageUrl = '/Images/default.jpg';
         }
 
         document.getElementById('content').innerHTML = `<img src="${imageUrl}" alt="${animal}">`;
