@@ -6,10 +6,14 @@ export class ColorButton extends Button {
         this.fColor = fColor;
     }
 
+    getButtonStyles() {
+        return `${super.getButtonStyles()} color: ${this.fColor};`;
+    }
+
     show() {
         document.write(`
             <button 
-                style="background-color: ${this.btnBgColor}; color: ${this.fColor}; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;" 
+                style="${this.getButtonStyles()}" 
                 title="${this.btnTitle}"
             >
                 ${this.btnText}
