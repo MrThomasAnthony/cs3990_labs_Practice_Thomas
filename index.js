@@ -4,7 +4,7 @@ let hannaShop = [
     name: "Colombian Supremo Coffee",
     price: 21.89,
     image:
-    "https://assets.shop.loblaws.ca/products/21380579/b1/en/front/21380579_fro
+    "images/coffebeans.png"
     },
     {
     group: "Coffee beans",
@@ -26,3 +26,105 @@ let hannaShop = [
     image: "https://m.media-amazon.com/images/I/41N4HzzYZfL._AC_US100_.jpg",
     },
     ];
+
+let checkBoxes = []
+
+class Item{
+    constructor(group,name,price,image){
+        this.group = group
+        this.name = name
+        this.price = price
+        this.image = image
+    }
+
+    render(){
+        let product_div = document.createElement('div')
+        product_div.id = 'product';
+
+        let product_group = document.createElement('h2')
+        product_group.textContent = this.group;
+
+        let product_img = document.createElement('img')
+        product_img.src = this.image;
+
+        let product_price = document.createElement('p')
+        product_price.textContent = this.price;
+
+        $('#itemsGallery').append(product_div)
+        $('#product').append(product_group)
+        $('#product').append(product_img)
+        $('#product').append(product_price)
+    }
+}
+
+class CheckBox{
+    constructor(id, type, checked){
+        this.id = id
+        this.type = type
+        this.checked = checked
+    }
+
+    render(){
+        let checkBox = document.createElement('input')
+        checkBox.type = this.type
+        checkBox.id = this.id
+        checkBox.checked = this.checked
+
+        $('#n_items').append(checkBox)
+    }
+
+    set_check(checked){
+        this.checked = checked
+    }
+}
+
+// Define the function to generate the desired number of instances and fill itemsGallery section. 
+// The first N items from your data will be displayed. Use the following template.   
+
+function generateItems(n){
+
+    $('#itemsGallery').empty()
+
+    for (let index = 0; index < n; index++) {
+        let product = hannaShop[index]
+        let item = new Item(product['group'],product['name'],product['price'],product['image'])
+        item.render()
+        console.log(item.group)
+    }
+}
+
+function generateCheckBoxes(n){
+    for (let index = 0; index < n; index++) {
+        let checkBox = new CheckBox(index,'checkbox',false)
+        checkBox.render()
+        checkBoxes.push(checkBox)
+        console.log(checkBoxes)
+    }
+}
+
+$('h3').append('<span id = after> - Click to See</span>')
+
+$('#itemsGroups').click(function(){
+    $('span').css('color','red')
+})
+
+generateCheckBoxes(4)
+console.log(checkBoxes[0])
+$('#0').click(function(){
+    generateItems(1)
+    console.log(checkBoxes[0])
+})
+
+
+$('#1').click(function(){
+    generateItems(2)
+})
+
+
+$('#2').click(function(){
+    generateItems(3)
+})
+
+$('#3').click(function(){
+    generateItems(4)
+})
