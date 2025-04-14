@@ -78,9 +78,6 @@ class CheckBox{
     }
 }
 
-// Define the function to generate the desired number of instances and fill itemsGallery section. 
-// The first N items from your data will be displayed. Use the following template.   
-
 function generateItems(n){
 
     $('#itemsGallery').empty()
@@ -93,8 +90,8 @@ function generateItems(n){
     }
 }
 
-function generateCheckBoxes(n){
-    for (let index = 0; index < n; index++) {
+function generateCheckBoxes(){
+    for (let index = 0; index < hannaShop.length; index++) {
         let checkBox = new CheckBox(index,'checkbox',false)
         checkBox.render()
         checkBoxes.push(checkBox)
