@@ -102,29 +102,39 @@ function generateCheckBoxes(n){
     }
 }
 
-$('h3').append('<span id = after> - Click to See</span>')
+$('h3').append('<span class = before> - Click to </span>')
 
 $('#itemsGroups').click(function(){
-    $('span').css('color','red')
+    $('span').toggleClass('after')
 })
 
 generateCheckBoxes(4)
-console.log(checkBoxes[0])
+console.log(checkBoxes[0].checked)
 $('#0').click(function(){
     generateItems(1)
-    console.log(checkBoxes[0])
+    for (let index = 0; index < 1; index++) {
+        checkBoxes[index].set_check(true);
+    }
 })
-
 
 $('#1').click(function(){
     generateItems(2)
+    for (let index = 0; index < 2; index++) {
+        checkBoxes[index].set_check(true);
+    }
 })
 
 
 $('#2').click(function(){
     generateItems(3)
+    for (let index = 0; index < 3; index++) {
+        checkBoxes[index].set_check(true);
+    }
 })
 
 $('#3').click(function(){
     generateItems(4)
+    for (let index = 0; index < 4; index++) {
+        checkBoxes[index].set_check(true);
+    }
 })

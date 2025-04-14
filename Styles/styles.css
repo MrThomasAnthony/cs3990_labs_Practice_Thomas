@@ -3,11 +3,26 @@
     background-color: aqua;
 }
 
-#after{
-    content: " - Click to See";
+.before{
+    
     color: green;
     font-weight: bold;
 }
+
+.before::after{
+    content: "see";
+}
+
+.after{
+    content: "hide";
+    color: red;
+    font-weight: bold;
+}
+
+.after::after{
+    content: "hide";
+}
+
 
 #product img{
     height: 250px;
